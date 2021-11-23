@@ -3,6 +3,8 @@ import requests
 
 
 class FeatureFlags(object):
+    conf_from_json = None
+    conf_from_url = None
     features = {}
 
     def __init__(
@@ -15,15 +17,22 @@ class FeatureFlags(object):
 
     def handle_config(self, conf_from_json, conf_from_url):
         if conf_from_json:
+            self.conf_from_json = conf_from_json
             with open(conf_from_json, "r") as f:
                 params = json.loads(f.read())
                 for k, v in params.items():
                     self.features[k] = v
         elif conf_from_url:
+            self.conf_from_url = conf_from_url
             params = requests.get(conf_from_url).json()
-            print(params)
+            # print(params)
             for k, v in params.items():
                 self.features[k] = v
+        return True
+
+    def reload_feature_flags(self):
+        self.handle_config(self.conf_from_json, self.conf_from_url)
+        return True
 
     @classmethod
     def handle_feature(cls, feature_name):
