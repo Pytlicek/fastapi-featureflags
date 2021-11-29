@@ -8,7 +8,7 @@ Very simple implementation of feature flags for FastAPI.
 ## Installing
 To install the package from pip, first run:
 ```bash
-pip install -U https://github.com/Pytlicek/fastapi-featureflags
+pip install -U https://github.com/Pytlicek/fastapi-featureflags/archive/refs/tags/0.0.1.zip
 ```
 
 ## Usage
@@ -44,7 +44,7 @@ You can enable or disable functions on the fly with `enable_feature` or `enable_
 When needed you can reload all feature flags with `reload_feature_flags`, 
 this is handy when you want to read and change features from URL fe.
 
-For non-production testing, is there a router available, 
+For non-production testing, a router is available, 
 so you can see the paths in swagger-ui docs.
 Use `include_in_schema=False` when defining the router for public deployments
 ```
