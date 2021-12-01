@@ -1,7 +1,7 @@
 {
   "json_only": false,
-  "ps": true,
-  "mam": false,
-  "ror": true,
-  "dd": true
+  "file_1": true,
+  "file_2": false,
+  "file_3": true,
+  "file_4": true
 }

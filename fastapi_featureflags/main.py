@@ -9,6 +9,7 @@ class FeatureFlags(object):
 
     @staticmethod
     def load_conf_from_url(conf_from_url):
+        FeatureFlags.features.clear()
         FeatureFlags.conf_from_url = conf_from_url
         params = requests.get(conf_from_url).json()
         for k, v in params.items():
@@ -16,6 +17,7 @@ class FeatureFlags(object):
 
     @staticmethod
     def load_conf_from_json(conf_from_json):
+        FeatureFlags.features.clear()
         FeatureFlags.conf_from_json = conf_from_json
         with open(conf_from_json, "r") as f:
             params = json.loads(f.read())

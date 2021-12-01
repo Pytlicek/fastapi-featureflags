@@ -1,12 +1,13 @@
-import pytest
 import sys
 from pathlib import Path
 
-sys.path.append(str(Path(".").absolute().parent))
+import pytest
 
 from fastapi_featureflags import FeatureFlags
+
+sys.path.append(str(Path(".").absolute().parent))
 
 
 @pytest.fixture(scope="module")
 def featureflags():
-    return FeatureFlags()
+    return FeatureFlags
