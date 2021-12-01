@@ -26,7 +26,7 @@ class FeatureFlags(object):
 
     @staticmethod
     def reload_feature_flags():
-        FeatureFlags.features = {}
+        FeatureFlags.features.clear()
         if FeatureFlags.conf_from_url:
             FeatureFlags.load_conf_from_url(FeatureFlags.conf_from_url)
             return True
