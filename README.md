@@ -44,16 +44,20 @@ Function `get_features` returns a list of all registered FF
 You can enable or disable functions on the fly with `enable_feature` or `enable_feature`  
 
 When needed you can reload all feature flags with `reload_feature_flags`, 
-this is handy when you want to read and change features from URL fe.
+this is useful when you want to read and change features from URL. 
+All unregistered or on-the-fly created FF, that are not in the configuration will be omitted.   
 
 For non-production testing, a router is available, 
 so you can see the paths in swagger-ui docs.
 Use `include_in_schema=False` when defining the router for public deployments
 ```
 from fastapi_featureflags import router as ff_router
-app.include_router(ff_router)
+app.include_router(ff_router, tags=["FeatureFlags"])
 ```
+---
+<img width="100%" alt="FastAPI-FF" src="https://user-images.githubusercontent.com/1430522/144305907-5e231e64-c120-4bde-9aad-58b9b194a361.png">
 
+---
 ### TODO
 - Tests
 - Better rewrite of the main class 
