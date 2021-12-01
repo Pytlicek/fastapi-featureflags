@@ -16,8 +16,8 @@ A simple example of feature flags:
 ```
 from fastapi_featureflags import FeatureFlags, feature_flag, feature_enabled
 
-my_ff = FeatureFlags(conf_from_url="https://pastebin.com/raw/4Ai3j2DC")
-print("Enabled Features:", my_ff.get_features())
+FeatureFlags(conf_from_url="https://pastebin.com/raw/4Ai3j2DC")
+print("Enabled Features:", FeatureFlags.get_features())
 
 
 @feature_flag("web_1")
@@ -32,8 +32,10 @@ if feature_enabled("web_2"):
 
 You can get FF (feature flags) from a file or URL:
 ```
-FeatureFlags(conf_from_url="https://pastebin.com/raw/4Ai3j2DC")
-FeatureFlags(conf_from_json="tests/features.json")
+FeatureFlags.load_conf_from_url("https://pastebin.com/raw/4Ai3j2DC")
+FeatureFlags.load_conf_from_json("tests/features.json")
+
+FeatureFlags.reload_feature_flags()
 ```
 There is also a handler that recognizes if the "@feature_flag" wrapper is used and the flag is not registered in the config. 
 This way you can also use FF at runtime. Defaults to False, so it's safer if you forget the feature flag in the code.
