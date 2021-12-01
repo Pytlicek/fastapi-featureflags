@@ -7,32 +7,32 @@ class FeatureFlags(object):
     conf_from_url = None
     features = {}
 
-    def __init__(
-            self,
-            conf_from_json: str = "",
-            conf_from_url: str = "",
-            **kwargs,
-    ):
-        self.handle_config(conf_from_json, conf_from_url)
+    @staticmethod
+    def load_conf_from_url(conf_from_url):
+        FeatureFlags.conf_from_url = conf_from_url
+        params = requests.get(conf_from_url).json()
+        for k, v in params.items():
+            FeatureFlags.features[k] = v
 
-    def handle_config(self, conf_from_json, conf_from_url):
-        if conf_from_json:
-            self.conf_from_json = conf_from_json
-            with open(conf_from_json, "r") as f:
-                params = json.loads(f.read())
-                for k, v in params.items():
-                    self.features[k] = v
-        elif conf_from_url:
-            self.conf_from_url = conf_from_url
-            params = requests.get(conf_from_url).json()
-            # print(params)
+    @staticmethod
+    def load_conf_from_json(conf_from_json):
+        FeatureFlags.conf_from_json = conf_from_json
+        with open(conf_from_json, "r") as f:
+            params = json.loads(f.read())
             for k, v in params.items():
-                self.features[k] = v
-        return True
+                FeatureFlags.features[k] = v
 
-    def reload_feature_flags(self):
-        self.handle_config(self.conf_from_json, self.conf_from_url)
-        return True
+    @staticmethod
+    def reload_feature_flags():
+        FeatureFlags.features = {}
+        if FeatureFlags.conf_from_url:
+            FeatureFlags.load_conf_from_url(FeatureFlags.conf_from_url)
+            return True
+        elif FeatureFlags.conf_from_json:
+            FeatureFlags.load_conf_from_json(FeatureFlags.conf_from_json)
+            return True
+        else:
+            return False
 
     @classmethod
     def handle_feature(cls, feature_name):
