@@ -5,6 +5,7 @@ import requests
 class FeatureFlags(object):
     conf_from_json = None
     conf_from_url = None
+    conf_from_dict = None
     features = {}
 
     @staticmethod
@@ -25,6 +26,13 @@ class FeatureFlags(object):
                 FeatureFlags.features[k] = v
 
     @staticmethod
+    def load_conf_from_dict(conf_from_dict):
+        FeatureFlags.features.clear()
+        FeatureFlags.conf_from_dict = conf_from_dict
+        for k, v in conf_from_dict.items():
+            FeatureFlags.features[k] = v
+
+    @staticmethod
     def reload_feature_flags():
         FeatureFlags.features.clear()
         if FeatureFlags.conf_from_url:
@@ -32,6 +40,9 @@ class FeatureFlags(object):
             return True
         elif FeatureFlags.conf_from_json:
             FeatureFlags.load_conf_from_json(FeatureFlags.conf_from_json)
+            return True
+        elif FeatureFlags.conf_from_dict:
+            FeatureFlags.load_conf_from_dict(FeatureFlags.conf_from_dict)
             return True
         else:
             return False
@@ -67,10 +78,8 @@ def feature_flag(feature_name):
         def wrapper(*args, **kwargs):
             FeatureFlags.handle_feature(feature_name)
             if FeatureFlags.is_enabled(feature_name):
-                # print("Feature Enabled:", feature_name)
                 return function(*args, **kwargs)
             else:
-                # print("Feature Disabled:", feature_name)
                 return True
 
         return wrapper
