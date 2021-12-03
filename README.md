@@ -1,7 +1,7 @@
-![PythonVersions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue)
-[![Sourcery](https://img.shields.io/badge/Sourcery-enabled-brightgreen)](https://sourcery.ai)
-[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-[![Known Vulnerabilities](https://snyk.io/test/github/pytlicek/fastapi-featureflags/badge.svg)](https://snyk.io/test/github/pytlicek/fastapi-featureflags)
+![PythonVersions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue) 
+[![Sourcery](https://img.shields.io/badge/Sourcery-enabled-brightgreen)](https://sourcery.ai) 
+[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) 
+[![Known Vulnerabilities](https://snyk.io/test/github/pytlicek/fastapi-featureflags/badge.svg)](https://snyk.io/test/github/pytlicek/fastapi-featureflags) 
 
 
 
@@ -9,7 +9,7 @@
 # FastAPI Feature Flags
 
 Very simple implementation of feature flags for FastAPI.  
-- Minimum configuration required. 
+- Minimum configuration required 
 - No unnecessary dependencies
 - Does its job
 
