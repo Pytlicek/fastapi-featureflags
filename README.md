@@ -61,7 +61,5 @@ app.include_router(ff_router, tags=["FeatureFlags"])
 
 ---
 ### TODO
-- Tests
-- Better rewrite of the main class 
+- Better main class 
 - Packaging
-- FF from environments
