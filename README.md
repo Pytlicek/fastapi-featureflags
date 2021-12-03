@@ -32,10 +32,11 @@ if feature_enabled("web_2"):
     print("Feature Should be disabled: web_2")
 ```
 
-You can get FF (feature flags) from a file or URL:
+You can get FF (feature flags) from a **File**, **URL**, **Dictionary or ENV Variables**:
 ```
 FeatureFlags.load_conf_from_url("https://pastebin.com/raw/4Ai3j2DC")
 FeatureFlags.load_conf_from_json("tests/features.json")
+FeatureFlags.load_conf_from_dict({"web_1": True, "web_2": False})
 
 FeatureFlags.reload_feature_flags()
 ```
