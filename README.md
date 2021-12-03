@@ -68,6 +68,15 @@ app.include_router(ff_router, tags=["FeatureFlags"])
 ---
 <img width="100%" alt="FastAPI-FF" src="https://user-images.githubusercontent.com/1430522/144305907-5e231e64-c120-4bde-9aad-58b9b194a361.png">
 
+# Contributing and Code of Conduct  
+### Contributing to fastapi-featureflags  
+As an open source project, fastapi-featureflags welcomes contributions of many forms.  
+Please read and follow our [Contributing to fastapi-featureflags](CONTRIBUTING.md)  
+
+### Code of Conduct  
+As a contributor, you can help us keep the fastapi-featureflags project open and inclusive.  
+Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md)  
+
 ---
 ### TODO
 - Better main class 
