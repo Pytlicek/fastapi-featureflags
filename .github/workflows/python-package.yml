@@ -30,4 +30,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       run: |
-        python3 -m pytest -v tests/ --disable-warnings
+        python3 -m pytest --cov=fastapi-featureflags -v tests/ --disable-warnings
