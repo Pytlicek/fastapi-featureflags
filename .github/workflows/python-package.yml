@@ -10,9 +10,8 @@ jobs:
   test:
 
     runs-on: ubuntu-latest
-    environment: test
     env:
-      FASTAPI_FF: ${{ secrets.FASTAPI_FF }}
+      FASTAPI_FF: '{"json_only": False, "file_1": True, "file_2": False, "file_3": True, "file_4": True}'
     strategy:
       matrix:
         python-version: [3.6, 3.7, 3.8, 3.9, '3.10']
