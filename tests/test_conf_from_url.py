@@ -9,7 +9,7 @@ def test_ff_from_url(featureflags):
         "web_1": True,
         "web_2": False,
         "web_3": True,
-        "web_4": False
+        "web_4": False,
     }
 
 
