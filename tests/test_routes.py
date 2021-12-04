@@ -13,37 +13,26 @@ def test_openapi_json(featureflags):
     assert "/all" in response.text
 
 
-def test_create_ff(featureflags):
-    featureflags.load_conf_from_url("https://pastebin.com/raw/4Ai3j2DC")
-    assert featureflags.get_features() == {
-        "web_only": False,
-        "web_1": True,
-        "web_2": False,
-        "web_3": True,
-        "web_4": False,
-    }
-
-
-def test_routes_all():
+def test_routes_all(ff_from_dict):
     response = client.get("/ff/all")
     assert response.status_code == 200
     assert response.json() == {
-        "web_only": False,
-        "web_1": True,
-        "web_2": False,
-        "web_3": True,
-        "web_4": False,
+        "dict_only": False,
+        "feat_1": True,
+        "feat_2": False,
+        "feat_3": True,
+        "feat_4": True,
     }
 
 
 def test_routes_enable_ff():
-    response = client.get("/ff/enable/web_only")
+    response = client.get("/ff/enable/dict_only")
     assert response.status_code == 200
-    assert response.json() == {"feature_flag": "web_only", "enabled": True}
+    assert response.json() == {"feature_flag": "dict_only", "enabled": True}
 
     response = client.get("/ff/all")
     assert response.status_code == 200
-    assert response.json()["web_only"] is True
+    assert response.json()["dict_only"] is True
 
 
 def test_routes_disable_ff():
