@@ -9,11 +9,11 @@ def test_empty_config():
 def test_config_from_dict(featureflags):
     conf_from_dict = featureflags.load_conf_from_dict(
         {
-            "json_only": False,
-            "file_1": True,
-            "file_2": False,
-            "file_3": True,
-            "file_4": True,
+            "dict_only": False,
+            "feat_1": True,
+            "feat_2": False,
+            "feat_3": True,
+            "feat_4": True,
         }
     )
     assert type(conf_from_dict) is bool

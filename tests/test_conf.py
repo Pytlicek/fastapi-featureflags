@@ -6,6 +6,10 @@ def test_empty_config():
     reload_result = empty_ff.reload_feature_flags()
     assert reload_result is False
 
+    assert empty_ff.conf_from_dict is None
+    assert empty_ff.conf_from_json is None
+    assert empty_ff.conf_from_url is None
+
 
 def test_feature_flag_wrapper(featureflags):
     assert featureflags.get_features().get("non_existing", None) is None

@@ -3,7 +3,10 @@ from fastapi_featureflags import feature_enabled
 
 def test_ff_from_url(featureflags):
     featureflags.load_conf_from_url("https://pastebin.com/raw/4Ai3j2DC")
+
     assert type(featureflags.get_features()) is dict
+    assert featureflags.conf_from_url is not None
+
     assert featureflags.get_features() == {
         "web_only": False,
         "web_1": True,

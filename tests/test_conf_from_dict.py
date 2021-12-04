@@ -14,6 +14,8 @@ def test_ff_from_dict(featureflags):
     )
 
     assert type(featureflags.get_features()) is dict
+    assert featureflags.conf_from_dict is not None
+
     assert featureflags.get_features() == {
         "json_only": False,
         "file_1": True,
