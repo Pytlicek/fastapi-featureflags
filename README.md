@@ -1,5 +1,6 @@
 [![Test Python package](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-package.yml/badge.svg?branch=main)](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-package.yml) 
-[![codecov](https://codecov.io/gh/Pytlicek/fastapi-featureflags/branch/main/graph/badge.svg?token=CVULQJ2SSA)](https://codecov.io/gh/Pytlicek/fastapi-featureflags)
+[![codecov](https://codecov.io/gh/Pytlicek/fastapi-featureflags/branch/main/graph/badge.svg?token=CVULQJ2SSA)](https://codecov.io/gh/Pytlicek/fastapi-featureflags) 
+[![Upload Python Package to PyPI](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-publish.yml) 
 ![PythonVersions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue) 
 [![Sourcery](https://img.shields.io/badge/Sourcery-enabled-brightgreen)](https://sourcery.ai) 
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) 
@@ -64,7 +65,7 @@ so you can see the paths in swagger-ui docs.
 Use `include_in_schema=False` when defining the router for public deployments
 ```
 from fastapi_featureflags import router as ff_router
-app.include_router(ff_router, tags=["FeatureFlags"])
+app.include_router(ff_router, prefix="/ff", tags=["FeatureFlags"])
 ```
 ---
 <img width="100%" alt="FastAPI-FF" src="https://user-images.githubusercontent.com/1430522/144305907-5e231e64-c120-4bde-9aad-58b9b194a361.png">
