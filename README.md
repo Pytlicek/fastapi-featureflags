@@ -77,8 +77,3 @@ Please read and follow our [Contributing to fastapi-featureflags](CONTRIBUTING.m
 ### Code of Conduct  
 As a contributor, you can help us keep the fastapi-featureflags project open and inclusive.  
 Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md)  
-
----
-### TODO
-- Better main class 
-- Packaging
