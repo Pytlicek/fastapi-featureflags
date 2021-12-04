@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="fastapi_featureflags",
-    version="0.3",
+    version="0.4",
     author="Tomas Pytel",
     author_email="pytlicek@gmail.com",
     description="Feature Flags for FastAPI",

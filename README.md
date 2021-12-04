@@ -19,7 +19,7 @@ Very simple implementation of feature flags for FastAPI.
 ## Installing
 To install the package from pip, first run:
 ```bash
-pip install -U https://github.com/Pytlicek/fastapi-featureflags/archive/refs/tags/0.3.zip
+pip install fastapi-featureflags
 ```
 
 ## Usage
@@ -77,8 +77,3 @@ Please read and follow our [Contributing to fastapi-featureflags](CONTRIBUTING.m
 ### Code of Conduct  
 As a contributor, you can help us keep the fastapi-featureflags project open and inclusive.  
 Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md)  
-
----
-### TODO
-- Better main class 
-- Packaging
