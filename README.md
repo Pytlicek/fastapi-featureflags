@@ -19,7 +19,7 @@ Very simple implementation of feature flags for FastAPI.
 ## Installing
 To install the package from pip, first run:
 ```bash
-https://pypi.org/project/fastapi-featureflags/
+pip install fastapi-featureflags
 ```
 
 ## Usage
