@@ -9,8 +9,6 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/Pytlicek?color=1DA1F2&logo=twitter&style=flat)](https://twitter.com/Pytlicek) 
 
 
-
-
 # FastAPI Feature Flags
 
 Very simple implementation of feature flags for FastAPI.  
