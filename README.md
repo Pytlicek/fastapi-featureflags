@@ -4,8 +4,8 @@
 ![PythonVersions](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue) 
 [![Sourcery](https://img.shields.io/badge/Sourcery-enabled-brightgreen)](https://sourcery.ai) 
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) 
-[![Known Vulnerabilities](https://snyk.io/test/github/pytlicek/fastapi-featureflags/badge.svg)](https://snyk.io/test/github/pytlicek/fastapi-featureflags) 
 [![Snyk](https://snyk-widget.herokuapp.com/badge/pip/sheet2dict/badge.svg)](https://snyk.io/advisor/python/fastapi-featureflags) 
+[![Downloads](https://pepy.tech/badge/fastapi-featureflags)](https://pepy.tech/project/fastapi-featureflags)
 [![Twitter Follow](https://img.shields.io/twitter/follow/Pytlicek?color=1DA1F2&logo=twitter&style=flat)](https://twitter.com/Pytlicek) 
 
 
