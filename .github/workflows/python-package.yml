@@ -14,7 +14,7 @@ jobs:
       FASTAPI_FF: '{"json_only": False, "file_1": True, "file_2": False, "file_3": True, "file_4": True}'
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9, '3.10']
+        python-version: [3.7, 3.8, 3.9, '3.10']
 
     steps:
     - uses: actions/checkout@v2
