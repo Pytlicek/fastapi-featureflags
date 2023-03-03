@@ -1,3 +1,2 @@
 requests==2.26.0
-fastapi==0.75.2
-starlette>=0.25.0 # not directly required, pinned by Snyk to avoid a vulnerability
+fastapi==0.92.0
