@@ -31,8 +31,7 @@ jobs:
         
     - name: Test with pytest
       run: |
-        poetry shell
-        python -m pytest --cov=fastapi_featureflags -v tests/ --disable-warnings
+        poetry run pytest --cov=fastapi_featureflags -v tests/ --disable-warnings
         
     - name: CodeCov
       run: bash <(curl -s https://codecov.io/bash)
