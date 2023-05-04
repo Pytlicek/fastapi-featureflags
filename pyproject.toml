@@ -17,6 +17,10 @@ requires-python = ">=3.7"
 dependencies = ["requests", "fastapi"]
 dynamic = ["version"]
 
+
+[tool.poetry.dev-dependencies]
+httpx = "0.23.0"
+
 [tool.setuptools]
 include-package-data = false
 
