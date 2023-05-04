@@ -2,8 +2,23 @@
 requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
 build-backend = "setuptools.build_meta"
 
+[tool.poetry]
+name = "fastapi-featureflags"
+authors = [{name = "Tomas Pytel", email = "pytlicek@gmail.com"}, {name = "Martin Hablak", email = "martin.hablak@gmail.com"}]
+description = "Feature Flags for FastAPI"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+urls = {Homepage = "https://github.com/Pytlicek/ fastapi-featureflags"}
+requires-python = ">=3.7"
+dependencies = ["requests", "fastapi"]
+dynamic = ["version"]
+
 [project]
-name = " fastapi-featureflags"
+name = "fastapi-featureflags"
 authors = [{name = "Tomas Pytel", email = "pytlicek@gmail.com"}, {name = "Martin Hablak", email = "martin.hablak@gmail.com"}]
 description = "Feature Flags for FastAPI"
 readme = "README.md"
