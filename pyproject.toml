@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.poetry]
 name = "fastapi-featureflags"
-authors = [{name = "Tomas Pytel", email = "pytlicek@gmail.com"}, {name = "Martin Hablak", email = "martin.hablak@gmail.com"}]
+authors = [ "Tomas Pytel <pytlicek@gmail.com>", "Martin Hablak <martin.hablak@gmail.com>"]
 description = "Feature Flags for FastAPI"
 readme = "README.md"
 classifiers = [
@@ -13,9 +13,8 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 urls = {Homepage = "https://github.com/Pytlicek/ fastapi-featureflags"}
-requires-python = ">=3.7"
-dependencies = ["requests", "fastapi"]
-dynamic = ["version"]
+version= "0.1.0"
+
 
 [project]
 name = "fastapi-featureflags"
@@ -29,11 +28,17 @@ classifiers = [
 ]
 urls = {Homepage = "https://github.com/Pytlicek/ fastapi-featureflags"}
 requires-python = ">=3.7"
-dependencies = ["requests", "fastapi"]
+dependencies = []
 dynamic = ["version"]
 
+[tool.poetry.dependencies]
+python = ">=3.7, <=3.12"
+requests = "^2.29.0"
+fastapi = "^0.95.1"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
 httpx = "0.23.0"
 
 [tool.setuptools]
