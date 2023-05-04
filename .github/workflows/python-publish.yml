@@ -40,6 +40,7 @@ jobs:
     - name: Build package
       run: |
         source .venv/bin/activate
+        poetry version ${GITHUB_REF#refs/*/}
         poetry build
         
     - name: Publish package
