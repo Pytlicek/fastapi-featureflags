@@ -15,6 +15,7 @@ classifiers = [
 urls = {Homepage = "https://github.com/Pytlicek/ fastapi-featureflags"}
 version= "0.1.0"
 
+
 [project]
 name = "fastapi-featureflags"
 authors = [{name = "Tomas Pytel", email = "pytlicek@gmail.com"}, {name = "Martin Hablak", email = "martin.hablak@gmail.com"}]
@@ -35,7 +36,9 @@ python = ">=3.7, <=3.12"
 requests = "^2.29.0"
 fastapi = "^0.95.1"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^4.0.0"
 httpx = "0.23.0"
 
 [tool.setuptools]
