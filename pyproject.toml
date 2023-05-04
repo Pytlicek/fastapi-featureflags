@@ -13,7 +13,6 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 urls = {Homepage = "https://github.com/Pytlicek/ fastapi-featureflags"}
-requires-python = ">=3.7"
 dependencies = ["requests", "fastapi"]
 dynamic = ["version"]
 
@@ -29,10 +28,12 @@ classifiers = [
 ]
 urls = {Homepage = "https://github.com/Pytlicek/ fastapi-featureflags"}
 requires-python = ">=3.7"
-dependencies = ["requests", "fastapi"]
+dependencies = []
 dynamic = ["version"]
 
-
+[tool.poetry.dependencies]
+python = ">=3.7, <=3.11"
+"requests", "fastapi"
 [tool.poetry.dev-dependencies]
 httpx = "0.23.0"
 
