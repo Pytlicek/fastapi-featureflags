@@ -24,7 +24,7 @@ pip install fastapi-featureflags
 
 ## Usage
 A simple example of feature flags:
-```
+```python
 from fastapi_featureflags import FeatureFlags, feature_flag, feature_enabled
 
 FeatureFlags(conf_from_url="https://pastebin.com/raw/4Ai3j2DC")
@@ -42,7 +42,7 @@ if feature_enabled("web_2"):
 ```
 
 You can get FF (feature flags) from a **File**, **URL**, **Dictionary or ENV Variables**:
-```
+```python
 FeatureFlags.load_conf_from_url("https://pastebin.com/raw/4Ai3j2DC")
 FeatureFlags.load_conf_from_json("tests/features.json")
 FeatureFlags.load_conf_from_dict({"web_1": True, "web_2": False})
@@ -62,7 +62,7 @@ All unregistered or on-the-fly created FF, that are not in the configuration wil
 For non-production testing, a router is available, 
 so you can see the paths in swagger-ui docs.
 Use `include_in_schema=False` when defining the router for public deployments
-```
+```python
 from fastapi_featureflags import router as ff_router
 app.include_router(ff_router, prefix="/ff", tags=["FeatureFlags"])
 ```
