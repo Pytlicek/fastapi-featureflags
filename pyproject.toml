@@ -12,7 +12,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-urls = {Homepage = "https://github.com/Pytlicek/ fastapi-featureflags"}
+urls = {Homepage = "https://github.com/Pytlicek/fastapi-featureflags"}
 version= "0.1.0"
 
 
