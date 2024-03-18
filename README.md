@@ -1,7 +1,7 @@
 [![Test Python package](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-package.yml/badge.svg?branch=main)](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-package.yml) 
 [![codecov](https://codecov.io/gh/Pytlicek/fastapi-featureflags/branch/main/graph/badge.svg?token=CVULQJ2SSA)](https://codecov.io/gh/Pytlicek/fastapi-featureflags) 
 [![Upload Python Package to PyPI](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Pytlicek/fastapi-featureflags/actions/workflows/python-publish.yml) 
-![PythonVersions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue) 
+![PythonVersions](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12-blue) 
 [![Sourcery](https://img.shields.io/badge/Sourcery-enabled-brightgreen)](https://sourcery.ai) 
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black) 
 [![Snyk](https://snyk-widget.herokuapp.com/badge/pip/sheet2dict/badge.svg)](https://snyk.io/advisor/python/fastapi-featureflags) 
