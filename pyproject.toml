@@ -32,7 +32,7 @@ dependencies = []
 dynamic = ["version"]
 
 [tool.poetry.dependencies]
-python = ">=3.7, <=3.12"
+python = ">=3.8, <=3.12"
 requests = "^2.29.0"
 fastapi = "^0.103.1"
 
